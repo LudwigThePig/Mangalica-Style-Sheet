@@ -1,6 +1,7 @@
-![Mascot]('https://github.com/LudwigThePig/Mangalica-Style-Sheet/Mascot.jpg')
+![Mascot]('https://imgur.com/bUwFeJW.jpg')
 
 # Mangalica Style Sheet
+Like putting lipstick on a pig
 
 ## About,
 
