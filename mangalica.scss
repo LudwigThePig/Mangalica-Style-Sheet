@@ -72,10 +72,10 @@ html {
   body { font-size: 1.4rem; }  
 }
 
-
 body {
-  
   margin: 0;
+  height: 100vh;
+  width: 100vw;
   font-family: 'Nunito', sans-serif;
 }
 
@@ -118,10 +118,53 @@ a:hover {
   } 
 }
 
+.demo {
+  margin: 2em 0;
+  padding: 2em;
+  @include getTheme($themes) {
+    border: 4px solid themed('alt');
+  }
+}
+
+////////////////////
+//* 4. Modifiers *//
+////////////////////
+
 .mss-root{
   @include getTheme($themes) {
     background: themed('primary');
     color: themed('secondary');
   } 
-    border: 4px solid red;
 }
+
+button, input[type="submit"] {
+  @include getTheme($themes) {
+    background: themed('alt');
+    color: themed('secondary');
+  }
+  font-weight: bold;
+  box-shadow: .5rem .5rem 0px 0px #001011;
+  border: none;
+  padding: 1rem 2rem;
+
+}
+
+.mss-secondary {
+  @include getTheme($themes) {
+    background: themed('secondary');
+    color: themed('primary');
+  }
+}
+  
+.mss-alert {
+  @include getTheme($themes) {
+    background: themed('active');
+    color: themed('alternative');
+  }
+}
+
+
+button:active, input[type="submit"]:active {
+  box-shadow: .2rem .2rem 0px 0px #001011;
+}
+
