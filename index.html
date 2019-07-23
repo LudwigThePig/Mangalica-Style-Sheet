@@ -8,16 +8,33 @@
   <title>Mangalica Style Sheet</title>
 </head>
 <body>
-  <div class="florence-theme">
+
+  <!-- You must declar your theme before your root like below
+        - Most people will just apply the theme to the body tag
+          e.g. <body class="pig-in-cannes"> <div class="mss-root"> </div> </body>
+  -->
+  <div class="pig-in-lisbone">
+    <div class="mss-root">
+      <h1>Welcome to Lisbone!</h1>
+    </div>
   </div>
-  
-  <div class="dark-theme">
+
+  <div class="pig-in-croatia">
+    <div class="mss-root">
+      <h1>Welcome to Croatia!</h1>
+    </div>
   </div>
-  
-  <div class="dark-theme">
+
+  <div class="pig-in-kiev">
+    <div class="mss-root">
+      <h1>Welcome to Kiev</h1>
+    </div>
   </div>
-  
-  <style
+
+  <div class="pig-in-cairo">
+    <div class="mss-root">
+      <h1>Welcome to Cairo</h1>
+    </div>
+  </div>
 </body>
 </html>
-nodemon -e scss -x \"node-sass --include-path scss mangalica.scss   mangalica.min.css \"

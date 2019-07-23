@@ -10,36 +10,36 @@
 /////////////////
 
 $themes: (
-  sand: (
+  cairo: (
     primary: #f9f3ed,
     secondary: #342e37,
-    active-color: #A43A4B,
-    alt-color: #e57853, 
+    active: #A43A4B,
+    alt: #e57853, 
   ),
-  midnight: (
+  kiev: (
     primary: #001011,
     secondary: #F2F2E6,
-    active-color: #ED6767,
-    alt-color: #793F5C,
+    active: #ED6767,
+    alt: #793F5C,
   ),
-  dawn: (
+  croatia: (
     primary: #323846,
     secondary: #fbf9f3,
-    active-color: #c3f7eb,
-    alt-color: #78dbf4,
+    active: #c3f7eb,
+    alt: #78dbf4,
   ),
-  cannes: (
-    primary: #faf3e3,
-    secondary: #965786,
+  lisbone: (
+    primary: #965786,
+    secondary: #fff,
     active-clor: #70cee4,
-    alt-color: #f8878f,
-  )
+    alt: #f8878f,
+  ),
 );
 
 @mixin getTheme($themes: $themes) {
   @each $theme, $map in $themes {
 
-    .theme-#{$theme} & {
+    .pig-in-#{$theme} & {
       $theme-map: () !global;
       @each $key, $submap in $map {
         $value: map-get(map-get($themes, $theme), '#{$key}');
@@ -65,7 +65,7 @@ html {
 }
 
 @media only screen and(min-width: 720px) {  
-  body { font-size: 8.4rem; }  
+  body { font-size: 1.8rem; }  
 }
 
 @media only screen and(max-width: 720px) {  
@@ -74,6 +74,7 @@ html {
 
 
 body {
+  
   margin: 0;
   font-family: 'Nunito', sans-serif;
 }
@@ -85,13 +86,13 @@ a {
   text-decoration: none;
   text-emphasis: none;
   @include getTheme($themes) {
-    color: themed('alt-color');  
+    color: themed('alt');  
   }
 }
 
 a:hover {
   @include getTheme($themes) {
-    color: themed('active-color');  
+    color: themed('active');  
   }
 }
 
@@ -107,12 +108,20 @@ a:hover {
 
 ::-webkit-scrollbar-thumb { // Scrollbar handle
   @include getTheme($themes) {
-    background: themed('active-color');
+    background: themed('active');
   } 
 }
 
 ::-webkit-scrollbar-thumb:hover { // Scrollbar handle on hover
   @include getTheme($themes) {
-    background: themed('active-color');
+    background: themed('active');
   } 
+}
+
+.mss-root{
+  @include getTheme($themes) {
+    background: themed('primary');
+    color: themed('secondary');
+  } 
+    border: 4px solid red;
 }
