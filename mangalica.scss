@@ -16,7 +16,7 @@ $themes: (
     active: #A43A4B,
     alt: #e57853, 
   ),
-  kiev: (
+  nyc: (
     primary: #001011,
     secondary: #F2F2E6,
     active: #ED6767,
@@ -28,7 +28,7 @@ $themes: (
     active: #f0326e,
     alt: #78dbf4,
   ),
-  lisbone: (
+  lisbon: (
     primary: #e25a53,
     secondary: #fff,
     active: #fdb35d,
@@ -137,6 +137,8 @@ a:hover {
   } 
 }
 
+//* 4.a Buttons //
+
 button, input[type="submit"] {
   @include getTheme($themes) {
     background: themed('alt');
@@ -168,3 +170,54 @@ button:active, input[type="submit"]:active {
   box-shadow: .2rem .2rem 0px 0px #001011;
 }
 
+/* These themes are too dark for a black box shadow
+    So, they get a custom box-shadow color
+*/
+$light-box-shadow: #E0D5C7;
+.pig-in-nyc button, input[type="submit"]{
+  box-shadow: .5rem .5rem 0px 0px $light-box-shadow;
+}
+.pig-in-nyc button:active,.pig-in-nyc input[type="submit"]:active{
+  box-shadow: .2rem .2rem 0px 0px $light-box-shadow;
+}
+
+
+
+//* 4.b Radio Buttons //
+
+input[type="radio"]
+{
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     display: inline-block;
+     position: relative;
+     background-color: #f1f1f1;
+     color: #666;
+     top: 10px;
+     height: 30px;
+     width: 30px;
+     border: 0;
+     border-radius: 50px;
+     cursor: pointer;     
+     margin-right: 7px;
+     outline: none;
+}
+input[type="radio"]:checked::before
+{
+     position: absolute;
+     font: 40px/1 'Open Sans', sans-serif;
+     font-weight: bold;
+     left: 5px;
+     top: -6.5px;
+     content: '●';
+     transform: rotate(40deg);
+}
+input[type="radio"]:hover
+{
+     background-color: #f7f7f7;
+}
+input[type="radio"]:checked
+{
+     background-color: #f1f1f1;
+}
