@@ -12,15 +12,20 @@ This is just a simple CSS framework built to fit my needs and potentially the ne
 ### Including in your project
 1. Clone this repo 
 2. Copy the mangalica.min.css into your project's directory
-3. Add a style in your HTML
-  - Example: `
+3. Link the style sheet in your HTML
+  - Example: 
+  ```html
+  <link rel="stylesheet" href="mangalica.min.css">
+  ```
 
 ### Modifying the Source
 
 1. Open your terminal and navigate to this directory.
 2. Enter the following 
 
-```nodemon -e scss -x "node-sass --include-path scss mangalica.scss   mangalica.min.css --output-style compressed"```
+```bash
+nodemon -e scss -x "node-sass --include-path scss mangalica.scss   mangalica.min.css --output-style compressed"
+```
 
 3. Make changes to the scss file
 
