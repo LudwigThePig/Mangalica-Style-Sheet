@@ -25,14 +25,14 @@ $themes: (
   croatia: (
     primary: #323846,
     secondary: #fbf9f3,
-    active: #c3f7eb,
+    active: #f0326e,
     alt: #78dbf4,
   ),
   lisbone: (
-    primary: #965786,
+    primary: #e25a53,
     secondary: #fff,
-    active-clor: #70cee4,
-    alt: #f8878f,
+    active: #fdb35d,
+    alt: #a4d9d6,
   ),
 );
 
@@ -159,7 +159,7 @@ button, input[type="submit"] {
 .mss-alert {
   @include getTheme($themes) {
     background: themed('active');
-    color: themed('alternative');
+    color: themed('secondary');
   }
 }
 
